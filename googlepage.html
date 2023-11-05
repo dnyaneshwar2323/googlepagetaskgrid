@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS File -->
+    <link rel="stylesheet" href="googlepage.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script
+      src="https://kit.fontawesome.com/9629817dc5.js"
+      crossorigin="anonymous"
+    ></script>
+</head>
+
+<body>
+    <!-- Left Side For the Notes And Timer -->
+    <section id="main">
+        <div id="left">
+            <!-- Sticky Notes -->
+            <div class="note-timer-stopwatch">
+                <h1>(+)Add Notes</h1>
+                <input type="text" id="inputnote" placeholder="Enter a new task">
+                <button id="addbutton">Add</button>
+                <ul id="tasklist"></ul>
+            </div>
+            <!-- Timer -->
+            <div class="note-timer-stopwatch">
+                <h1>Countdown Timer</h1>
+                <label for="datepicker"></label>
+                <input type="datetime-local" id="datepicker" onclick="startTimer">
+                <input type="button" value="Start" onclick="startTimer();">
+                <div id="countdown"></div>
+            </div>
+        </div>
+
+        <!-- Middle Section of the page. -->
+        <div class="search-container">
+            <!--  1. Search Bar -->
+            <div class="search">
+                <input type="text" id="search-bar" placeholder= " Search google or type a URL" name="search">
+            </div>
+
+            <!-- Icons and Links  -->
+            <div id="icons-container">
+                <div class="icon">
+                    <a href="https://www.instagram.com/">
+                    <img src="./images/instagram.jpg" alt="instagram"></a>
+                    <a class="delete-icon">x</a>
+                </div>
+
+                <div class="icon">
+                    <a href="https://www.facebook.com/login/?privacy_mutation_token=eyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNjk4NzMxNDQ0LCJjYWxsc2l0ZV9pZCI6MjY5NTQ4NDUzMDcyMDk1MX0%3D" target="_blank">
+                    <img src="./images/facebook.png" alt="facebook"></a>
+                    <a class="delete-icon">x</a>
+                </div>
+
+                <div class="icon">
+                    <a href="https://tiktokapp.cc/">
+                    <img src="./images/tiktok.jpg" alt="tiktok"></a>
+                    <a class="delete-icon">x</a>
+                </div>
+
+                 <div class="icon">
+                    <a href="https://in.pinterest.com/#search">
+                    <img src="./images/pinterest.png" alt="pinterest"></a>
+                    <a class="delete-icon">x</a>
+                </div>
+
+                <div class="icon">
+                    <a href="https://www.linkedin.com/in/dnyaneshwarchavan/">
+                    <img src="./images/linkedin.jpg" alt="linkedin"></a>
+                    <a class="delete-icon">x</a>
+                </div>
+
+                <div class="icon">
+                    <a href="https://www.wikipedia.org/">
+                    <img src="./images/wikipedia.jpg" alt="wikipedia"></a>
+                    <a class="delete-icon">x</a>
+                </div>
+    
+                <div class="icon">
+                    <a href="https://www.netflix.com/in/">
+                    <img src="./images/net.png" alt="net"></a>
+                    <a class="delete-icon">x</a>
+                </div>
+
+                <div class="icon">
+                    <a href="https://edu.google.com/workspace-for-education/classroom/">
+                    <img src="./images/classroom.jpg" alt="classroom"></a>
+                    <a class="delete-icon">x</a>
+                </div>
+
+                <div class="icon">
+                    <a href="https://www.roblox.com/">
+                    <img src="./images/roblox.jpg" alt="roblox"></a>
+                    <a class="delete-icon">x</a>
+                </div>
+
+                <div class="icon">
+                    <a href="https://www.twitch.tv/">
+                    <img src="./images/twitch.jpg" alt="twitch"></a>
+                    <a class="delete-icon">x</a>
+                </div>
+
+                <div class="icon">
+                    <a href="https://discord.com/">
+                    <img src="./images/discord.png" alt="discord"></a>
+                    <a class="delete-icon">x</a>
+                </div>
+
+                <div class="icon">
+                    <a href="https://web.whatsapp.com/">
+                    <img src="./images/whatsapp.jpg" alt="whatsapp"></a>
+                    <a class="delete-icon">x</a>
+                </div>
+   
+                <div class="icon">
+                    <a href="https://open.spotify.com/">
+                    <img src="./images/spotify.png" alt="spotify"></a>
+                    <a class="delete-icon">x</a>
+                </div>
+
+                <div class="icon">
+                    <a href="https://www.amazon.in/?&ext_vrnc=hi&tag=googhydrabk1-21&ref=pd_sl_7hz2t19t5c_e&adgrpid=58355126069&hvpone=&hvptwo=&hvadid=678711876615&hvpos=&hvnetw=g&hvrand=6308080401342986817&hvqmt=e&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9062094&hvtargid=kwd-10573980&hydadcr=14453_2371562" style="--i:10">
+                    <img src="./images/amazon.jpg" alt="amazon"></a>
+                    <a class="delete-icon">x</a>
+                </div>
+
+                <div class="icon">
+                    <a href="https://www.bestbuy.com/">
+                    <img src="./images/bestbuy.png" alt="bestbuy"></a>
+                    <a class="delete-icon">x</a>
+                </div>
+
+                <div class="icon">
+                    <a href="https://www.ebay.com/">
+                    <img src="./images/ebay.png" alt="ebay"></a>
+                    <a class="delete-icon">x</a>
+                </div>
+            </div>
+        </div>
+        <!-- Right Section of the Page. Digital Watch -->
+        <div class="right">
+            <div class="note-timer-stopwatch">
+                <h1>Time</h1>
+                <p id="time"></p>
+            </div>
+        </div>
+    </section>
+    <!-- Javascript -->
+    <script src="googlescript.js"></script>
+</body>
+</html>
